@@ -2,15 +2,17 @@
 
 
 ID=$(id -u)
-echo "script_name is $0"
+TIMESTAMP=$(date +%F-%H:%M:%S)
+
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE() {
 if [ $? is -ne 0]
 then 
-    echo "ERROR:: Installation of is failed"
+    echo "ERROR:: $2 of is failed"
     exit 1
 else
-    echo "Installation of is success"
+    echo "$2 of is success"
 fi
 
 }
@@ -22,10 +24,10 @@ else
    echo "you are root user"
 fi
 
-yum install mysql -y
+yum install mysql -y & >> $LOGFILE
 
-VALIDATE
+VALIDATE $? "Installing MySQL"
 
-yum install git -y
+yum install git -y & >> $LOGFILE
 
-VALIDATE
+VALIDATE $? "Installing MySQL"
