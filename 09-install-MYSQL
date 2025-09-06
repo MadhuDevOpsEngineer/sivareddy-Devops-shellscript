@@ -20,4 +20,12 @@ else
     echo "Installation of MYSQK is success"
 fi
 
+yum install git -y
 
+if [ $? is -ne 0]
+then 
+    echo "ERROR:: Installation of GIT is failed"
+    exit 1
+else
+    echo "Installation of GIT is success"
+fi
