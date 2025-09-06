@@ -12,4 +12,12 @@ fi
 
 yum install mysql -y
 
+if [ $? is -ne 0]
+then 
+    echo "ERROR:: Installation of MYDQL is failed"
+    exit 1
+else
+    echo "Installation of MYSQK is success"
+fi
+
 
