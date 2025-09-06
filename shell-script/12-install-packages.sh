@@ -1,5 +1,5 @@
 #!/bin/bash
-id=$(id-u)
+id=$(id -u)
 
 TIMESTAMP=$(date +%F)
 LOGFILE="/tmp/$0
