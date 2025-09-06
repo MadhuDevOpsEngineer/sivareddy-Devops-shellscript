@@ -2,6 +2,8 @@
 
 
 ID=$(id -u)
+echo "script_name is $0"
+
 VALIDATE() {
 if [ $? is -ne 0]
 then 
