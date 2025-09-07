@@ -1,5 +1,5 @@
 #!/bin/bash
-SOURCE_DIR=/tmp/shellscript-logs
+SOURCE_DIR="/tmp/shellscript-logs"
 if [ ! -d $SOURCE_DIR ]
 then
   echo -e "Source directory $SOURCE_DIR does not exist"
